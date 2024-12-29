@@ -13,6 +13,18 @@ describe("Utils test suite", () => {
     expect(actual).toBe(expected);
   });
 
+  describe.only("ToUpperCase exampls", () => {
+    it.each([
+      { input: "daniyal", expected: "DANIYAL" },
+      { input: "My-String", expected: "MY-STRING" },
+      { input: "arta", expected: "ARTA" },
+      { input: "asal", expected: "ASAL" },
+    ])("$input toUpperCase should be $expected", ({ input, expected }) => {
+      const actual = toUpperCase(input);
+      expect(actual).toBe(expected);
+    });
+  });
+
   describe("getStringInfo for argument My-String should", () => {
     it("return right length", () => {
       const actual = getStringInfo("My-String");
