@@ -1,3 +1,13 @@
+export class StringUtils {
+  public toUpperCase(arg: string) {
+    return arg.toUpperCase();
+  };
+
+  public toLowerCase(arg: string) {
+    return arg.toLocaleLowerCase();
+  }
+}
+
 export function toUpperCase(arg: string) {
   return arg.toUpperCase();
 }
